@@ -1,0 +1,28 @@
+<html>
+<head>
+<input type="button" name="submit" value="Submit" onclick="calculate();" />
+<div class="myDiv">Answer
+</div>
+
+<script>
+
+
+
+let payment = 800;
+let total = 3000;
+let i = 0;
+
+
+function calculate() {
+for (i=0; i < 60; i++) {
+	total = total * 1.05;
+	total = total + payment; 
+	console.log(total);
+}
+}
+
+
+
+</script>
+
+</html>
