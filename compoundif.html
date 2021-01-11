@@ -3,26 +3,37 @@
 <input type="button" name="submit" value="Submit" onclick="calculate();" />
 <div class="myDiv">Answer
 </div>
-
+<label for="months">Months</label><br>
+<input type="text" name="months" id="months" required="required"><br>
+<label for="percent">How Much Percent Per Month</label><br>
+<input type="text" name="percent" id="percent" required="required"><br>
+<label for="contribution">How Much Contribution Per Month</label><br>
+<input type="text" name="contribution" id="contribution" required="required"><br>	
+<label for="intial">Intial Amount Of Money</label><br>
+<input type="text" name="initial" id="initial" required="required"><br>
+	
+	
 <script>
-
-
-
-let payment = 800;
+	
 let total = 3000;
 let i = 0;
 
 
 function calculate() {
+	// get desired numbers
+	var initial = (document.getElementById("initial").value)
+	var months = (document.getElementById("months").value)
+	var payment = (document.getElementById("contribution").value)
+	// make the percent be entered 5 but then go to 1.05
+	var percent = (document.getElementById("percent").value)
+	// calculate how much money earned
 for (i=0; i < 60; i++) {
-	total = total * 1.05;
+	total = total * percent;
 	total = total + payment; 
 	console.log(total);
+	document.getElementById("myDiv").innerHTML = total;
 }
 }
-
-
 
 </script>
-
 </html>
