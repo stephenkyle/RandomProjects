@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="project.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kyle's Casino</title>
+</head>
+<label for ="money">Current Money</label>
+<div id="money">10000</div>
+
+<label for="Bet">Enter The Bet Amount</label>
+<input type="number" id="coinInput" min="10" max="1000000000" placeholder="$50" name="coinInput" value="50" required>
+<form>
+  <input type="radio" id="heads" name="coinButton" value="heads">
+  <label for="heads">Heads</label><br>
+  <input type="radio" id="tails" name="coinButton" value="tails">
+  <label for="tails">Tails</label><br>
+</form>
+<div id="coin">LOADING</div>
+
+<input type="button" name="submit1" value="Submit" onclick="chanceCoin();"/>
+
+<input type="button" name="submit2" value="Submit" onclick="chanceCard();"/>
+<script src="script.js"></script>
+</html>
