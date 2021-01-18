@@ -6,9 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Kyle's Casino</title>
 </head>
+
 <label for ="money">Current Money</label>
 <div id="money">10000</div>
 
+<section style="float: left; background-color: #d1e8eb">
+	<h1>FLIP A COIN</h1>
 <label for="Bet">Enter The Bet Amount</label>
 <input type="number" id="coinInput" min="10" max="1000000000" placeholder="$50" name="coinInput" value="50" required>
 <form>
@@ -18,9 +21,15 @@
   <label for="tails">Tails</label><br>
 </form>
 <div id="coin">LOADING</div>
-
 <input type="button" name="submit1" value="Submit" onclick="chanceCoin();"/>
+</section>
 
+<section style="float: left background-color: #5f6c6e">
+	<h1>PICK A CARD</h1>
+	<div id="suit">LOADING</div>
+	<div id="value">LOADING</div>
 <input type="button" name="submit2" value="Submit" onclick="chanceCard();"/>
+</section>
+
 <script src="script.js"></script>
 </html>
