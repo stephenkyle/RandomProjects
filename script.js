@@ -85,12 +85,20 @@ function chanceCard() {
 	}
 }
 
+function roulette() {
+	var rNum = Math.round(Math.random() * 37);
+	var redNums = ["1", "3", "5", "7", "9", "12", "14", "16", "18", "19", "21", "23", "25", "27", "30", "32", "34", "36"]
+	document.getElementById("roulette").innerHTML = rGuess;
+	if 
 
+
+}
 // to do 
 // daily login
 // ai fighting?
 // slots
 // rolling dice
-// shooting game that rewards for money
+// shooting game that rewards for money && typing
 // loan system
 // lottery system
+// save money system
