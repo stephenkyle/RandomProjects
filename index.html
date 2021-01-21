@@ -10,7 +10,7 @@
 <label for ="money">Current Money</label>
 <div id="money">10000</div>
 
-<section style="float: left; background-color: #d1e8eb">
+<section style="flex: 50%; background-color: #d1e8eb">
 	<h1>FLIP A COIN</h1>
 <label for="Bet">Enter The Bet Amount</label>
 <input type="number" id="coinInput" min="10" max="1000000000" placeholder="$50" name="coinInput" value="50" required>
@@ -24,11 +24,36 @@
 <input type="button" name="submit1" value="Submit" onclick="chanceCoin();"/>
 </section>
 
-<section style="float: left background-color: #5f6c6e">
+<section style="flex: 50%; background-color: #5f6c6e">
 	<h1>PICK A CARD</h1>
-	<div id="suit">LOADING</div>
-	<div id="value">LOADING</div>
-<input type="button" name="submit2" value="Submit" onclick="chanceCard();"/>
+	<label for="Bet">Enter The Bet Amount</label>
+	<input type="number" id="cardInput" min="10" max="1000000000" placeholder="$50" name="cardInput" value="50" required>
+
+	<label for="cardSuitInput">Choose a suit:</label>
+		<select name="cardSuitInput" id="cardSuitInput">
+			<option value="Hearts">Hearts</option>
+   			<option value="Diamonds">Diamonds</option>
+   			<option value="Clubs">Clubs</option>
+   			<option value="Spades">Spades</option>
+   		</select>
+   		<select name="cardValueInput" id="cardValueInput">
+			<option value="A">A</option>
+   			<option value="2">2</option>
+   			<option value="3">3</option>
+   			<option value="4">4</option>
+   			<option value="5">5</option>
+   			<option value="6">6</option>
+   			<option value="7">7</option>
+   			<option value="8">8</option>
+   			<option value="9">9</option>
+   			<option value="J">J</option>
+   			<option value="Q">Q</option>
+   			<option value="K">K</option>
+   		</select>
+
+	<p>Suit: </p><span id="suit" style="display: inline;"></span>
+	<p>Value: </p><span id="value" style="display: inline;"></span>
+	<input type="button" name="submit2" value="Submit" onclick="chanceCard();"/>
 </section>
 
 <script src="script.js"></script>
