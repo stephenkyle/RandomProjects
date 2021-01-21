@@ -88,6 +88,10 @@ function chanceCard() {
 function roulette() {
 	var rNum = Math.round(Math.random() * 37);
 	var redNums = ["1", "3", "5", "7", "9", "12", "14", "16", "18", "19", "21", "23", "25", "27", "30", "32", "34", "36"]
+	var blackNums = ["0", "2", "4", "6", "8", "11", "13", "15", "17", "20", "22", "24", "26", "28", "29", "31", "33", "35"]
+	// row 1 =  for (i = 0; i < redNums.length; i += 3)
+	//rednums[0]
+	// look at making an object  
 	document.getElementById("roulette").innerHTML = rGuess;
 	if 
 
