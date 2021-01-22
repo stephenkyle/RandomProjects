@@ -84,7 +84,36 @@ function chanceCard() {
 	document.getElementById("money").innerHTML = "$" + currentMoney;
 	}
 }
+/*
+function circleFight() {
+	var c = document.getElementById("canvas");
+	var circle1 = c.getContext("2d");
+	circle1.beginPath();
+	circle1.arc(100, 75, 50, 0, 2 * Math.PI);
+	circle1.stroke();
+	var circle2 = c.getContext("2d");
+	circle2.beginPath();
+	circle2.arc(200, 150, 50, 0, 2 * Math.PI);
+	circle2.stroke();
+}
 
+function component(circle1, circle2) {
+  this.speedX = Math.random() * 2;
+  this.speedY = Math.random() * 2;
+  this.x = x;
+  this.y = y;
+  this.update = function() {
+    ctx = myGameArea.context;
+    ctx.fillStyle = color;
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  }
+  this.newPos = function() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+  }
+}
+*/
+/* coming back for this
 function roulette() {
 	var rNum = Math.round(Math.random() * 37);
 	var redNums = ["1", "3", "5", "7", "9", "12", "14", "16", "18", "19", "21", "23", "25", "27", "30", "32", "34", "36"]
@@ -96,7 +125,7 @@ function roulette() {
 	if 
 
 
-}
+}*/
 // to do 
 // daily login
 // ai fighting?
