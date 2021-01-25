@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="project.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kyle's Casino</title>
+</head>
+<nav>
+	<ul class="nav">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="inventory.html">Inventory</a></li>
+	</ul>
+</nav>
+<label for ="money">Current Money</label>
+<div id="money">10000</div>
+<ul id="inventory">
+	<li></li>
+</ul>
+<label for="sell">Sell an Item</label><br>
+<select name="sell" id="sell">
+	<option value="0">silver</option>
+	<option value="1">red</option>
+	<option value="2">green</option>
+</select>
+<input type="button" name="submit4" value="Submit" onclick="removeItem();" style="padding: 15px 32px;"/><br>
+
+<img src="" alt="Won" id="won">
+<input type="button" name="submit3" value="Submit" onclick="rollChance();" style="padding: 15px 32px;"/>
+<script src="script.js"></script>
+<script src="fight.js"></script>
+</html>
