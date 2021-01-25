@@ -86,12 +86,16 @@ function chanceCard() {
 }
 
 function rollChance() {
-	currentMoney -= 2000;
+	let rollCost = 2000;
+	if ((currentMoney - rollCost) < 0) {
+		alert("You do not have enough money.");
+	} else {
+	currentMoney -= rollCost;
 	document.getElementById("money").innerHTML = "$" + currentMoney;
 	var rarity = [
-	["a", "b", "c"],
-	["s", "t", "u"],
-	["v", "w", "x"],
+	["s", "s", "s"],
+	["s", "s", "s"],
+	["s", "s", "s"],
 	["y", "z", "1"],
 	["d", "e", "f"],
 	["g", "h", "i"],
@@ -99,43 +103,18 @@ function rollChance() {
 	["m", "n", "o"],
 	["p", "q", "r"]
 	];
+	// use the for loop to make the animation
+	// will do later
 	for (roll = 0; roll < 1; roll++) {
 		var rarityColor = Math.round(Math.random() * 8);
 		var rarityNum = Math.round(Math.random() * 2);
 		var itemR = rarity[rarityColor][rarityNum];
+		document.getElementById("won").src = itemR + '.png';
 		console.log(itemR);
 	}
-//(items[1][1]); 
-}
-/*
-function circleFight() {
-	var c = document.getElementById("canvas");
-	var circle1 = c.getContext("2d");
-	circle1.beginPath();
-	circle1.arc(100, 75, 50, 0, 2 * Math.PI);
-	circle1.stroke();
-	var circle2 = c.getContext("2d");
-	circle2.beginPath();
-	circle2.arc(200, 150, 50, 0, 2 * Math.PI);
-	circle2.stroke();
-}
+	// have to add to an array which will be used as storage for inventory
+}}
 
-function component(circle1, circle2) {
-  this.speedX = Math.random() * 2;
-  this.speedY = Math.random() * 2;
-  this.x = x;
-  this.y = y;
-  this.update = function() {
-    ctx = myGameArea.context;
-    ctx.fillStyle = color;
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-  }
-  this.newPos = function() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-  }
-}
-*/
 /* coming back for this
 function roulette() {
 	var rNum = Math.round(Math.random() * 37);
