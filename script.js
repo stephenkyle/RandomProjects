@@ -84,6 +84,31 @@ function chanceCard() {
 	document.getElementById("money").innerHTML = "$" + currentMoney;
 	}
 }
+
+function rollChance() {
+	currentMoney -= 2000;
+	document.getElementById("money").innerHTML = "$" + currentMoney;
+	var rarity = [
+	["a", "b", "c"],
+	["s", "t", "u"],
+	["v", "w", "x"],
+	["y", "z", "1"],
+	["d", "e", "f"],
+	["g", "h", "i"],
+	["j", "k", "l"],
+	["m", "n", "o"],
+	["p", "q", "r"]
+	];
+	for (roll = 0; roll < 1; roll++) {
+		var rarityColor = Math.round(Math.random() * 8);
+		var itemR = rarity[rarityColor];
+		console.log(itemR.length);
+		var itemNum = Math.round(Math.random() * (itemR.length - 1));
+		console.log(itemNum);
+		console.log(itemR);
+	}
+//(items[1][1]); 
+}
 /*
 function circleFight() {
 	var c = document.getElementById("canvas");
@@ -135,3 +160,6 @@ function roulette() {
 // loan system
 // lottery system
 // save money system
+// horse racing bet
+// build a line set speed of each line to random speed
+// spend money on a loot system, spins like csgo cases rare items
