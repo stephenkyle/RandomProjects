@@ -1,5 +1,6 @@
 let currentMoney = 10000;
 var inventory = [];
+var fakeArray = ["silver", "red", "green"];
 
 function chanceCoin() {
 
@@ -68,7 +69,7 @@ function chanceCard() {
 	thisValue = cardValue[cv];
 	// display what suit was randomaly chosen
 	document.getElementById("value").innerHTML = thisValue;
-
+																							// check if bet = null
 	// check if user input suit and value match
 	if (suitBet == thisSuit && valueBet == thisValue) {
 		bet *= 52;
@@ -76,7 +77,7 @@ function chanceCard() {
 		// if they won then add bet back to their current money
 		currentMoney += bet;
 	} else if (suitBet == thisSuit) {
-		bet *= 3;
+		bet *= 2.5;
 		currentMoney += bet;
 	} else if (valueBet == thisValue) {
 		bet *= 10;
@@ -98,6 +99,7 @@ function rollChance() {
 	["s", "s", "s"],
 	["s", "s", "s"],
 	["s", "s", "s"],
+	["s", "s", "s"],
 	["g", "g", "g"],
 	["g", "g", "g"],
 	["g", "g", "g"],
@@ -109,18 +111,32 @@ function rollChance() {
 	];
 	// use the for loop to make the animation
 	// will do later
-	for (roll = 0; roll < 1; roll++) {
-		var rarityColor = Math.round(Math.random() * 11);
+	for (var roll = 0; roll < 1; roll++) {
+		var rarityColor = Math.round(Math.random() * 12);
 		var rarityNum = Math.round(Math.random() * 2);
 		var itemR = rarity[rarityColor][rarityNum];
-		document.getElementById("won").src = itemR + '.png';
-		console.log(itemR);
+		itemR = itemR + '.png';
+		document.getElementById("won").src = itemR;
 	}
 	// have to add to an array which will be used as storage for inventory
+	// add function to either keep or sell right away
 	inventory.push(itemR);
-	console.log(inventory);
-}}
+		var newItem = document.createElement("img");
+		newItem.src = itemR;
+		document.body.insertBefore(newItem, document.body.childNodes[0]);
+		console.log("working");
+	}
+}
 
+function removeItem(){
+	console.log(fakeArray);
+	var v = document.getElementById("sell");
+	var ev = v.value;
+	console.log(ev);
+	const remove = fakeArray.indexOf(ev)
+  	fakeArray.splice(remove, 1);
+	console.log(fakeArray);
+}
 /* coming back for this
 function roulette() {
 	var rNum = Math.round(Math.random() * 37);
@@ -146,3 +162,11 @@ function roulette() {
 // horse racing bet
 // build a line set speed of each line to random speed
 // spend money on a loot system, spins like csgo cases rare items
+// use weapon that you roll (forces people to get new weapons)(more rarity gives more points towards game)
+// the weapon has durabilty
+// there needs to be an end goal
+// leaderboard ^
+// russian roulette
+// sell unwanted items
+// make a drop down that displays all items in array
+// select one
