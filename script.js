@@ -1,4 +1,5 @@
 let currentMoney = 10000;
+var inventory = [];
 
 function chanceCoin() {
 
@@ -96,23 +97,28 @@ function rollChance() {
 	["s", "s", "s"],
 	["s", "s", "s"],
 	["s", "s", "s"],
-	["y", "z", "1"],
-	["d", "e", "f"],
-	["g", "h", "i"],
-	["j", "k", "l"],
-	["m", "n", "o"],
-	["p", "q", "r"]
+	["s", "s", "s"],
+	["g", "g", "g"],
+	["g", "g", "g"],
+	["g", "g", "g"],
+	["g", "b", "b"],
+	["g", "b", "b"],
+	["b", "p", "p"],
+	["p", "p", "o"],
+	["o", "r", "gold"]
 	];
 	// use the for loop to make the animation
 	// will do later
 	for (roll = 0; roll < 1; roll++) {
-		var rarityColor = Math.round(Math.random() * 8);
+		var rarityColor = Math.round(Math.random() * 11);
 		var rarityNum = Math.round(Math.random() * 2);
 		var itemR = rarity[rarityColor][rarityNum];
 		document.getElementById("won").src = itemR + '.png';
 		console.log(itemR);
 	}
 	// have to add to an array which will be used as storage for inventory
+	inventory.push(itemR);
+	console.log(inventory);
 }}
 
 /* coming back for this
