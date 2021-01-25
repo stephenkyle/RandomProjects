@@ -101,10 +101,8 @@ function rollChance() {
 	];
 	for (roll = 0; roll < 1; roll++) {
 		var rarityColor = Math.round(Math.random() * 8);
-		var itemR = rarity[rarityColor];
-		console.log(itemR.length);
-		var itemNum = Math.round(Math.random() * (itemR.length - 1));
-		console.log(itemNum);
+		var rarityNum = Math.round(Math.random() * 2);
+		var itemR = rarity[rarityColor][rarityNum];
 		console.log(itemR);
 	}
 //(items[1][1]); 
